@@ -1,0 +1,641 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>chart</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <script src="https://kit.fontawesome.com/d49b90c6aa.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" type="text/css" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
+    <script src="https://code.jquery.com/jquery-2.2.4.min.js"
+        integrity="sha256-BbhdlvQf/xTY9gja0Dq3HiwQF8LaCRTXxZKRutelT44=" crossorigin="anonymous"></script>
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" rel="stylesheet"
+        type="text/css" />
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.bundle.min.js"
+        type="text/javascript"></script>
+</head>
+<style>
+    .nav{
+        font-family: 'Poppins', sans-serif;
+    }
+    body {
+        background: linear-gradient(90deg, #b460a8, plum);
+
+    }
+
+    body {
+
+        /* font-family: "Times New Roman", Times, serif; */
+        font-style: italic;
+
+    }
+
+    .table-responsive {
+        overflow-x: auto;
+    }
+
+    p {
+        justify-content: center;
+    }
+</style>
+
+<body>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-w76AqPfDkMBDXo30jS1Sgez6pr3x5MlQ1ZAGC+nuZB+EYdgRZgiwxhTBTkF7CXvN"></script>
+
+    <script type="text/javascript">
+        $(document).ready(function () {
+            $(document).on('click', '.dropdown-menu', function (e) {
+                e.stopPropagation();
+            });
+
+            if ($(window).width() < 992) {
+                $('.dropdown-menu a').click(function (e) {
+                    e.preventDefault();
+                    if ($(this).next('.submenu').length) {
+                        $(this).next('.submenu').toggle();
+                    }
+                    $('.dropdown').on('hide.bs.dropdown', function () {
+                        $(this).find('.submenu').hide();
+                    })
+                });
+            }
+
+        });
+    </script>
+
+    <style type="text/css">
+        @media (min-width: 992px) {
+            .dropdown-menu .dropdown-toggle:after {
+                border-top: .3em solid transparent;
+                border-right: 0;
+                border-bottom: .3em solid transparent;
+                border-left: .3em solid;
+            }
+
+            .dropdown-menu .dropdown-menu {
+                margin-left: 0;
+                margin-right: 0;
+            }
+
+            .dropdown-menu li {
+                position: relative;
+            }
+
+            .nav-item .submenu {
+                display: none;
+                position: absolute;
+                left: 100%;
+                top: -7px;
+            }
+
+            .nav-item .submenu-left {
+                right: 100%;
+                left: auto;
+            }
+
+            .dropdown-menu>li:hover {
+                background-color: #f1f1f1
+            }
+
+            .dropdown-menu>li:hover>.submenu {
+                display: block;
+            }
+        }
+    </style>
+    </head>
+
+    <body>
+
+
+        <div class="container-lg ">
+
+            <nav class="navbar navbar-expand-lg navbar-dark " style=" background: #063247;box-shadow: 0 3px 15px rgba(0,0,0,0.4);
+    
+     z-index: 10;font-family: 'Times New Roman', Times, serif">
+
+                <a class="navbar-brand" href="home.html" style=" font-size: 1.009em
+      ;
+      font-weight: bold;">Conversion Wizard</a>
+                <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#main_nav">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="main_nav">
+
+                    <ul class="navbar-nav  ml-auto">
+                        <li class="nav-item active"> <a class="nav-link" href="home.html">Home </a> </li>
+                        <li class="nav-item active"><a class="nav-link" href="about.html"> About </a></li>
+                        <li class="nav-item dropdown active">
+                            <a class="nav-link dropdown-toggle" href="#" data-toggle="dropdown"> Explore</a>
+                            <ul class="dropdown-menu">
+                                <li><a class="dropdown-item" href="articles.html"> Articles </a></li>
+                                <li><a class="dropdown-item" href="history.html"> History </a></li>
+                                <li><a class="dropdown-item" href="chart.html"> Charts </a></li>
+                                <li><a class="dropdown-item" href="faq1.html"> FAQ's </a>
+                            </ul>
+                        </li>
+                        <li class="nav-item dropdown active">
+                            <a class="nav-link dropdown-toggle" href="#" data-toggle="dropdown"> Converter </a>
+                            <ul class="dropdown-menu">
+                                <li><a class="dropdown-item dropdown-toggle" href="converter.html#q1"> Mass </a>
+                                    <ul class="submenu dropdown-menu">
+                                        <li><a class="dropdown-item" href="converter.html#q1">kg to £</a></li>
+                                        <li><a class="dropdown-item" href="converter.html#q2">£ to kg</a></li>
+                                        <li><a class="dropdown-item" href="converter.html#q3">oz. to gm</a></li>
+                                        <li><a class="dropdown-item" href="converter.html#q4">gm to oz.</a></li>
+
+                                    </ul>
+                                </li>
+                                <li><a class="dropdown-item dropdown-toggle" href="converter.html#q6"> Temperature </a>
+                                    <ul class="submenu dropdown-menu">
+                                        <li><a class="dropdown-item" href="converter.html#q6">°C to °F</a></li>
+                                        <li><a class="dropdown-item" href="converter.html#q7">°F to °C</a></li>
+
+                                    </ul>
+                                </li>
+                                <li><a class="dropdown-item dropdown-toggle" href="converter.html#q8"> Currency </a>
+                                    <ul class="submenu dropdown-menu">
+                                        <li><a class="dropdown-item" href="converter.html#q8">$ to ₨</a></li>
+                                        <li><a class="dropdown-item" href="converter.html#q9">₨ to $</a></li>
+
+                                    </ul>
+                                </li>
+                                <li><a class="dropdown-item dropdown-toggle" href="converter.html#q10"> Volume</a>
+                                    <ul class="submenu dropdown-menu">
+                                        <li><a class="dropdown-item" href="converter.html#q10">yd3 to mᶟ</a></li>
+                                        <li><a class="dropdown-item" href="converter.html#q11">gal to L</a></li>
+
+                                    </ul>
+                                </li>
+                                <li><a class="dropdown-item dropdown-toggle" href="converter.html#q12"> Area</a>
+                                    <ul class="submenu dropdown-menu">
+                                        <li><a class="dropdown-item" href="converter.html#q12">ac to ha</a></li>
+                                        <li><a class="dropdown-item" href="converter.html#q13"> sq. ft. to m2</a></li>
+
+                                    </ul>
+                                </li>
+                                <li><a class="dropdown-item dropdown-toggle" href="converter.html#q14"> length</a>
+                                    <ul class="submenu dropdown-menu">
+                                        <li><a class="dropdown-item" href="converter.html#q14">m to km</a></li>
+                                        <li><a class="dropdown-item" href="5converter.html#q15">in to mm</a></li>
+
+                                    </ul>
+                                </li>
+                            </ul>
+                        </li>
+                        <li class="nav-item active"> <a class="nav-link" href="contact.html">Contact </a> </li>
+                    </ul></div>
+            </nav>
+
+
+            <br> <br> <br> <br>
+            <div class="container">
+                <center>
+                    <h1>METRIC CONVERSION CHART</h1>
+                </center>
+                <p> <b>Metric conversion</b> provides a quick and easy reference for converting one unit of measurement
+                    to
+                    another.
+                    It includes a list of common measurements and the conversion factors needed to convert them to
+                    another unit.
+                    These charts are especially helpful for students, scientists, engineers, and anyone who works with
+                    measurements
+                    on a regular basis. By using a metric conversion chart, you can avoid errors and save time in your
+                    calculations.</p>
+                </p>
+                <h1>What is a Metric Conversion Chart?</h1>
+                <p>A chart that includes all the fundamental units and their conversion, is the metric conversion chart.
+                    These
+                    fundamental metric units are mostly based on length, volume, time, weight, temperature and area. The
+                    basic
+                    metric units are meters (m), kilograms (kg), seconds (s), kelvin (K), ampere (A), etc. These units
+                    are
+                    included
+                    in the metric system but feet, yards, inches, pounds, etc. come under the imperial system. </p>
+
+                <center>
+                    <h3>Length Conversion Chart</h3>
+                </center><br>
+                <div class="row justify-content-center">
+                    <div class="col-sm-6">
+                        <table class="table table-striped table-bordered table-dark">
+                            <thead class="thead-light">
+                                <tr>
+                                    <th>Unit</th>
+                                    <th>Multiplying Factor</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>Inches to Millimeters</td>
+                                    <td>25.4</td>
+                                </tr>
+                                <tr>
+                                    <td>Feet to Meters</td>
+                                    <td>0.3048</td>
+                                </tr>
+                                <tr>
+                                    <td>Yards to Meters</td>
+                                    <td>0.9144</td>
+                                </tr>
+                                <tr>
+                                    <td>Miles to Kilometers</td>
+                                    <td>1.6093</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                        <p>Note: To convert from the smaller unit to the larger unit, divide the value by the
+                            multiplying
+                            factor. To
+                            convert
+                            from the larger unit to the smaller unit, multiply the value by the multiplying factor.</p>
+                    </div>
+                </div>
+
+                <br><br>
+
+                <center>
+                    <h3>Area Conversion Chart</h3>
+                </center><br>
+
+                <div class="row justify-content-center">
+                    <!-- <div class="col-lg-8"> -->
+                    <div class="col-sm-6">
+                        <table class="table table-bordered text-center table-dark">
+                            <thead class="thead-light">
+                                <tr>
+                                    <th scope="col">From</th>
+                                    <th scope="col">To</th>
+                                    <th scope="col">Multiplying Factor</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>Square inches</td>
+                                    <td>Square millimeters</td>
+                                    <td>645.16</td>
+                                </tr>
+                                <tr>
+                                    <td>Square feet</td>
+                                    <td>Square meters</td>
+                                    <td>0.092903</td>
+                                </tr>
+                                <tr>
+                                    <td>Square yards</td>
+                                    <td>Square meters</td>
+                                    <td>0.836127</td>
+                                </tr>
+                                <tr>
+                                    <td>Acres</td>
+                                    <td>Hectares</td>
+                                    <td>0.404686</td>
+                                </tr>
+                                <tr>
+                                    <td>Square miles</td>
+                                    <td>Square kilometers</td>
+                                    <td>2.58999</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+
+                <br><br>
+
+                <center>
+                    <h2>Volume Conversion Chart</h2>
+                </center><br>
+                <div class="row justify-content-center">
+
+                    <div class="col-sm-6">
+                        <table class="table table-bordered table-dark">
+                            <thead class="thead-light">
+                                <tr>
+                                    <th>From</th>
+                                    <th>To</th>
+                                    <th>Multiplying Factor</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>Fluid Ounces</td>
+                                    <td>Milliliters</td>
+                                    <td>29.5735</td>
+                                </tr>
+                                <tr>
+                                    <td>Gallons</td>
+                                    <td>Liters</td>
+                                    <td>3.78541</td>
+                                </tr>
+                                <tr>
+                                    <td>Cubic Feet</td>
+                                    <td>Cubic Meters</td>
+                                    <td>0.0283168</td>
+                                </tr>
+                                <tr>
+                                    <td>Cubic Yards</td>
+                                    <td>Cubic Meters</td>
+                                    <td>0.764555</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+
+                <br><br>
+
+                <center>
+                    <h2>Mass Conversion Chart</h2>
+                </center>
+                <div class="container">
+                    <div class="row justify-content-center">
+                        <div class="col-sm-6">
+                            <table class="table table-bordered table-dark">
+                                <thead class="thead-light">
+                                    <tr>
+                                        <th>Unit</th>
+                                        <th>Multiplying Factor</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr>
+                                        <td>Ounces</td>
+                                        <td>28.35 grams</td>
+                                    </tr>
+                                    <tr>
+                                        <td>Pounds</td>
+                                        <td>0.4536 kilograms</td>
+                                    </tr>
+                                    <tr>
+                                        <td>Short tons (2000 lb)</td>
+                                        <td>0.9072 mega grams (or "metric ton")</td>
+                                    </tr>
+                                </tbody>
+
+                            </table></div></div></div>
+                            <br><br>
+
+                            <center>
+                                <h2>Temperature Conversion</h2>
+                            </center><br>
+                            <div class="row justify-content-center">
+                                <div class="col-sm-6">
+                                    <table class="table table-bordered table-dark">
+                                        <thead class="thead-light">
+                                            <tr>
+                                                <th>Fahrenheit</th>
+                                                <th>Celsius</th>
+                                            </tr>
+                                        </thead>
+                                        <tbody>
+                                            <tr>
+                                                <td>-459.67°F </td>
+                                                <td>-273.15°C</td>
+                                            </tr>
+                                            <tr>
+                                                <td>-40°F</td>
+                                                <td>-40°C</td>
+                                            </tr>
+                                            <tr>
+                                                <td>32°F</td>
+                                                <td>0°C</td>
+                                            </tr>
+                                            <tr>
+                                                <td>68°F</td>
+                                                <td>20°C</td>
+                                            </tr>
+                                            <tr>
+                                                <td>98.6°F</td>
+                                                <td>37°C</td>
+                                            </tr>
+                                            <tr>
+                                                <td>212°F</td>
+                                                <td>100°C</td>
+                                            </tr>
+                                            <tr>
+                                                <td>392°F</td>
+                                                <td>200°C</td>
+                                            </tr>
+                                            <tr>
+                                                <td>572°F</td>
+                                                <td>300°C</td>
+                                            </tr>
+                                            <tr>
+                                                <td>752°F</td>
+                                                <td>400°C</td>
+                                            </tr>
+                                            <tr>
+                                                <td>932°F</td>
+                                                <td>500°C</td>
+                                            </tr>
+
+                                        </tbody>
+                                    </table>
+</div></div>
+                                    <!-- <script type="text/javascript" src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script> -->
+                                    <br>
+                                        <p>The multiplying factor for temperature conversion is not needed as the
+                                            conversion betweenFahrenheit and Celsius is not a direct multiplication.
+                                            Instead, it requires adding or subtracting a certain value and then
+                                            multiplying or dividing by a factor.</p>
+                                   
+                                
+                            </div>
+
+                                <h1>CONCLUSION</h1>
+                                <p>In conclusion, understanding metric conversion is essential for a wide range of
+                                    industries,
+                                    professions, and everyday activities. From cooking and baking to construction and
+                                    engineering, the
+                                    ability to convert between different units of measurement is a valuable skill that
+                                    can save time,
+                                    money, and resources.<br><br>
+                                    The metric system provides a simple and consistent framework
+                                    for measuring
+                                    length, volume, mass, and temperature, and converting between units is a matter of
+                                    applying
+                                    multiplying factors that are easy to memorize and use. By using the metric
+                                    conversion chart,
+                                    individuals and organizations can make accurate and efficient conversions, whether
+                                    they are working
+                                    with small or large quantities. </p>
+                          
+                        </div>
+                    </div>
+                </div></div></div>
+                <br><br><br>
+                <!-- Footer -->
+                <footer class="bg-dark text-center text-white  container-fluid">
+                    <!-- Grid container -->
+                    <div class="container p-4">
+                        <!-- Section: Social media -->
+                        <section class="mb-4">
+                            <!-- Facebook -->
+                            <a class="btn btn-outline-light btn-floating m-1" href="https://www.facebook.com/"
+                                role="button"><i class="fab fa-facebook-f"></i></a>
+
+                            <!-- Twitter -->
+                            <a class="btn btn-outline-light btn-floating m-1" href="https://twitter.com/i/flow/signup"
+                                role="button"><i class="fab fa-twitter"></i></a>
+
+                            <!-- Google -->
+                            <a class="btn btn-outline-light btn-floating m-1" href="https://mail.google.com/mail/"
+                                role="button"><i class="fab fa-google"></i></a>
+
+                            <!-- Instagram -->
+                            <a class="btn btn-outline-light btn-floating m-1" href="https://www.instagram.com/"
+                                role="button"><i class="fab fa-instagram"></i></a>
+
+                            <!-- Linkedin -->
+                            <a class="btn btn-outline-light btn-floating m-1" href="https://pk.linkedin.com/"
+                                role="button"><i class="fab fa-linkedin-in"></i></a>
+
+                            <!-- Github -->
+                            <a class="btn btn-outline-light btn-floating m-1" href="https://github.com/login"
+                                role="button"><i class="fab fa-github"></i></a>
+                        </section>
+                        <!-- Section: Social media -->
+
+                        <!-- Section: Form -->
+                        <section class="">
+                            <form action="">
+                                <!--Grid row-->
+                                <div class="row d-flex justify-content-center">
+                                    <!--Grid column-->
+                                    <div class="col-auto">
+                                        <p class="pt-2">
+                                            <strong>Sign up for our newsletter</strong>
+                                        </p>
+                                    </div>
+                                    <!--Grid column-->
+
+                                    <!--Grid column-->
+                                    <div class="col-md-5 col-12">
+                                        <!-- Email input -->
+                                        <div class="form-outline form-white mb-4">
+                                            <input type="email" id="form5Example21" class="form-control" />
+                                            <label class="form-label" for="form5Example21">Email address</label>
+                                        </div>
+                                    </div>
+                                    <!--Grid column-->
+
+                                    <!--Grid column-->
+                                    <div class="col-auto">
+                                        <!-- Submit button -->
+                                        <button type="submit" class="btn btn-outline-light mb-4" href="contact.html">
+                                            Subscribe
+                                        </button>
+                                    </div>
+                                    <!--Grid column-->
+                                </div>
+                                <!--Grid row-->
+                            </form>
+                        </section>
+
+                        <!-- Section: Text -->
+
+                        <!-- Section: Links -->
+                        <section class="">
+                            <!--Grid row-->
+                            <div class="row">
+                                <!--Grid column-->
+                                <div class="col-lg-3 col-md-6 mb-4 mb-md-0">
+                                    <h6 class="text-uppercase fw-bold mb-4">
+                                        <i class="fas fa-gem me-3"></i>Conversion Wizard
+                                    </h6>
+                                    <p>
+                                        "Our mission is to simplify and standardize metric conversions for individuals
+                                        and businesses worldwide.
+                                        Through our user-friendly platform, we provide accurate measurement conversions
+                                        that
+                                        eliminate errors and confusion in scientific, industrial, and everyday
+                                        applications."
+                                    </p>
+
+                                </div>
+                                <!--Grid column-->
+
+                                <!--Grid column-->
+                                <div class="col-lg-3 col-md-6 mb-4 mb-md-0">
+                                    <h6 class="text-uppercase fw-bold mb-4">link</h6>
+                                    <p>
+                                        <a href="home.html" class="text-reset-primary">Home</a>
+                                    </p>
+                                    <p>
+                                        <a href="articles.html" class="text-reset-primary">Articles</a>
+                                    </p>
+                                    <p>
+                                        <a href="history.html" class="text-reset-primary">History</a>
+                                    </p>
+                                    <p>
+                                        <a href="chart.html" class="text-reset-primary">Charts</a>
+                                    </p>
+                                    <p>
+                                        <a href="faq1.html" class="text-reset-primary">FAQ's</a>
+                                    </p>
+                                    <p>
+                                        <a href="about.html" class="text-reset-primary">About</a>
+                                    </p>
+                                </div>
+                                <!--Grid column-->
+
+                                <!--Grid column-->
+                                <div class="col-lg-3 col-md-6 mb-4 mb-md-0">
+                                    <h6 class="text-uppercase fw-bold mb-4">Converter
+
+                                    </h6>
+
+                                    <p>
+                                        <a href="converter.html#q1" class="text-reset-primary">Mass</a>
+                                    </p>
+                                    <p>
+                                        <a href="converter.html#q12" class="text-reset-primary">Area</a>
+                                    </p>
+                                    <p>
+                                        <a href="converter.html#q10" class="text-reset-primary">Volume</a>
+                                    </p>
+                                    <p>
+                                        <a href="#q14converter.html" class="text-reset-primary">Length</a>
+                                    </p>
+                                    <p>
+                                        <a href="converter.html#q6" class="text-reset-primary">Temperature</a>
+                                    </p>
+                                    <p>
+                                        <a href="converter.html#q8" class="text-reset-primary">Currency</a>
+                                    </p>
+                                </div>
+                                <!--Grid column-->
+
+                                <!--Grid column-->
+                                <div class="col-lg-3 col-md-6 mb-4 mb-md-0">
+                                    <h6 class="text-uppercase fw-bold mb-4">Contact</h6>
+
+                                    <p><i class="fas fa-home me-3"></i> New York, NY 10012, US</p>
+                                    <p>
+                                        <i class="fas fa-envelope me-3"></i>
+                                        info@example.com
+                                    </p>
+                                    <p><i class="fas fa-phone me-3"></i> + 01 234 567 88</p>
+                                    <p><i class="fas fa-print me-3"></i> + 01 234 567 89</p>
+                                </div>
+                                <!--Grid column-->
+                            </div>
+                            <!--Grid row-->
+                        </section>
+                        <!-- Section: Links -->
+                    </div>
+                    <!-- Grid container -->
+
+                    <!-- Copyright -->
+                    <div class="text-center p-3" style="background-color: rgba(0, 0, 0, 0.2);">
+                        © 2020 Copyright:
+                        <a class="text-white" href="home.html">Conversion Wizard</a>
+                    </div>
+                    <!-- Copyright -->
+                </footer>
+    </body>
+
+</html>

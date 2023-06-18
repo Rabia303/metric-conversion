@@ -1,0 +1,454 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>About</title>
+  <script src="https://code.jquery.com/jquery-2.2.4.min.js"
+    integrity="sha256-BbhdlvQf/xTY9gja0Dq3HiwQF8LaCRTXxZKRutelT44=" crossorigin="anonymous"></script>
+  <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" rel="stylesheet"
+    type="text/css" />
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.bundle.min.js"
+    type="text/javascript"></script>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/css/bootstrap.min.css"
+    integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.css
+
+      "></script>
+  <link rel="stylesheet" href="path/to/font-awesome/css/font-awesome.min.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  <script src="https://kit.fontawesome.com/d49b90c6aa.js" crossorigin="anonymous"></script>
+</head>
+<style>
+  * {
+    margin: 0;
+    padding: 0;
+    font-family: "Open Sans", sans-serif;
+    box-sizing: border-box;
+  }
+
+  body {
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #f1f1f1;
+
+  }
+
+  .about-section {
+    background: url("images/pexels-fauxels-3184635.jpg") no-repeat left;
+    background-size: 55%;
+    background-color: #fdfdfd;
+    overflow: hidden;
+    padding: 100px 0;
+  }
+
+  .inner-container {
+    width: 55%;
+    float: right;
+    background-color: #fdfdfd;
+    padding: 150px;
+
+  }
+
+  .inner-container h1 {
+    margin-bottom: 30px;
+    font-size: 30px;
+    font-weight: 900;
+  }
+
+  .text {
+    font-size: 13px;
+    color: #545454;
+    line-height: 30px;
+    text-align: justify;
+    margin-bottom: 40px;
+  }
+
+  .skills {
+    display: flex;
+    justify-content: space-between;
+    font-weight: 700;
+    font-size: 13px;
+  }
+
+  @media screen and(max-width:1200px) {
+    .inner-container {
+      padding: 80px;
+    }
+  }
+
+  @media screen and(max-width:1000px) {
+    .about-section {
+      background-size: 100%;
+      padding: 100px 40px;
+    }
+
+    .inner-container {
+      width: 100%;
+    }
+
+  }
+
+  @media screen and(max-width:600px) {
+    .about-section {
+      padding: 0;
+    }
+
+    .inner-container {
+      padding: 60px;
+    }
+  }
+</style>
+
+<script type="text/javascript">
+  $(document).ready(function () {
+    $(document).on('click', '.dropdown-menu', function (e) {
+      e.stopPropagation();
+    });
+
+    if ($(window).width() < 992) {
+      $('.dropdown-menu a').click(function (e) {
+        e.preventDefault();
+        if ($(this).next('.submenu').length) {
+          $(this).next('.submenu').toggle();
+        }
+        $('.dropdown').on('hide.bs.dropdown', function () {
+          $(this).find('.submenu').hide();
+        })
+      });
+    }
+
+  });
+</script>
+
+<style type="text/css">
+  @media (min-width: 992px) {
+    .dropdown-menu .dropdown-toggle:after {
+      border-top: .3em solid transparent;
+      border-right: 0;
+      border-bottom: .3em solid transparent;
+      border-left: .3em solid;
+    }
+
+    .dropdown-menu .dropdown-menu {
+      margin-left: 0;
+      margin-right: 0;
+    }
+
+    .dropdown-menu li {
+      position: relative;
+    }
+
+    .nav-item .submenu {
+      display: none;
+      position: absolute;
+      left: 100%;
+      top: -7px;
+    }
+
+    .nav-item .submenu-left {
+      right: 100%;
+      left: auto;
+    }
+
+    .dropdown-menu>li:hover {
+      background-color: #f1f1f1
+    }
+
+    .dropdown-menu>li:hover>.submenu {
+      display: block;
+    }
+  }
+</style>
+
+
+<body>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-w76AqPfDkMBDXo30jS1Sgez6pr3x5MlQ1ZAGC+nuZB+EYdgRZgiwxhTBTkF7CXvN"
+    crossorigin="anonymous"></script>
+ 
+  <div class="container-lg " >
+
+    <nav class="navbar navbar-expand-lg navbar-dark " style=" background: #063247;box-shadow: 0 3px 15px rgba(0,0,0,0.4);
+        
+         z-index: 10;font-family: 'Times New Roman', Times, serif">
+
+      <a class="navbar-brand" href="home.html" style=" font-size: 1.009em
+          ;
+          font-weight: bold;">Conversion Wizard</a>
+      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#main_nav">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="main_nav">
+
+        <ul class="navbar-nav  ml-auto">
+          <li class="nav-item active"> <a class="nav-link" href="home.html">Home </a> </li>
+          <li class="nav-item active"><a class="nav-link" href="about.html"> About </a></li>
+          <li class="nav-item dropdown active">
+            <a class="nav-link dropdown-toggle" href="#" data-toggle="dropdown"> Explore </a>
+            <ul class="dropdown-menu">
+              <li><a class="dropdown-item" href="articles.html"> Articles </a></li>
+              <li><a class="dropdown-item" href="history.html"> History </a></li>
+              <li><a class="dropdown-item" href="chart.html"> Charts </a></li>
+              <li><a class="dropdown-item" href="faq1.html"> FAQ's </a>
+            </ul>
+          </li>
+          <li class="nav-item dropdown active">
+            <a class="nav-link dropdown-toggle" href="converter.html" data-toggle="dropdown"> Converter </a>
+            <ul class="dropdown-menu">
+              <li><a class="dropdown-item dropdown-toggle" href="converter.html#q1"> Mass </a>
+                <ul class="submenu dropdown-menu">
+                  <li><a class="dropdown-item" href="converter.html#q1">kg to £</a></li>
+                  <li><a class="dropdown-item" href="converter.html#q2">£ to kg</a></li>
+                  <li><a class="dropdown-item" href="converter.html#q3">oz. to gm</a></li>
+                  <li><a class="dropdown-item" href="converter.html#q4">gm to oz.</a></li>
+
+                </ul>
+              </li>
+              <li><a class="dropdown-item dropdown-toggle" href="converter.html#q6"> Temperature </a>
+                <ul class="submenu dropdown-menu">
+                  <li><a class="dropdown-item" href="converter.html#q6">°C to °F</a></li>
+                  <li><a class="dropdown-item" href="converter.html#q7">°F to °C</a></li>
+
+                </ul>
+              </li>
+              <li><a class="dropdown-item dropdown-toggle" href="converter.html#q8"> Currency </a>
+                <ul class="submenu dropdown-menu">
+                  <li><a class="dropdown-item" href="converter.html#q8">$ to ₨</a></li>
+                  <li><a class="dropdown-item" href="converter.html#q9">₨ to $</a></li>
+
+                </ul>
+              </li>
+              <li><a class="dropdown-item dropdown-toggle" href="converter.html#q10"> Volume</a>
+                <ul class="submenu dropdown-menu">
+                  <li><a class="dropdown-item" href="converter.html#q10">yd3 to mᶟ</a></li>
+                  <li><a class="dropdown-item" href="converter.html#q11">gal to L</a></li>
+
+                </ul>
+              </li>
+              <li><a class="dropdown-item dropdown-toggle" href="converter.html#q12"> Area</a>
+                <ul class="submenu dropdown-menu">
+                  <li><a class="dropdown-item" href="converter.html#q12">ac to ha</a></li>
+                  <li><a class="dropdown-item" href="converter.html#q13"> sq. ft. to m2</a></li>
+
+                </ul>
+              </li>
+              <li><a class="dropdown-item dropdown-toggle" href="converter.html#q14"> length</a>
+                <ul class="submenu dropdown-menu">
+                  <li><a class="dropdown-item" href="converter.html#q14">m to km</a></li>
+                  <li><a class="dropdown-item" href="converter.html#q15">in to mm</a></li>
+
+                </ul>
+              </li>
+            </ul>
+          </li>
+          <li class="nav-item active"> <a class="nav-link" href="contact.html">Contact </a> </li>
+        </ul></div>
+    </nav>
+    <div class="about-section">
+      <div class="inner-container">
+        <h1>About Us</h1>
+        <p class="text">
+          Welcome to our metric conversion website! We're a team of passionate developers who believe that
+          converting between metric units should be easy and straightforward for everyone.<br>
+
+          Our mission is to make metric conversions accessible to anyone, regardless of their background or level
+          of technical knowledge. Whether you're a student trying to convert units for a science project or a
+          professional engineer working on a complex calculation, our website is designed to help you get the job
+          done quickly and accurately.<br>
+
+          We've spent countless hours researching and testing various conversion formulas and algorithms to ensure
+          that our website delivers accurate and reliable results. We're constantly updating our database with the
+          latest conversion rates and adding new features to make the site even more user-friendly.<br>
+
+          But we don't just stop at providing conversions. We also strive to educate our users about the
+          importance of using the metric system and the benefits it brings to science, industry, and daily life.
+          We believe that by promoting the use of metric units, we can help create a more connected and efficient
+          world.<br>
+
+          Thank you for visiting our website, and we hope you find it useful and informative. If you have any
+          feedback or suggestions for improvement, please don't hesitate to contact us. We're always happy to hear
+          from our users and improve our service in any way we can.<br>
+        </p>
+        <div class="skills">
+          <span>Converters</span>
+          <span>Articles</span>
+          <span>History</span>
+        </div>
+      </div>
+    </div>
+    <!-- Footer -->
+    <footer class="bg-dark text-center text-white  container-fluid">
+      <!-- Grid container -->
+      <div class="container p-4">
+        <!-- Section: Social media -->
+        <section class="mb-4">
+          <!-- Facebook -->
+          <a class="btn btn-outline-light btn-floating m-1" href="https://www.facebook.com/" role="button"><i
+              class="fab fa-facebook-f"></i></a>
+
+          <!-- Twitter -->
+          <a class="btn btn-outline-light btn-floating m-1" href="https://twitter.com/i/flow/signup" role="button"><i
+              class="fab fa-twitter"></i></a>
+
+          <!-- Google -->
+          <a class="btn btn-outline-light btn-floating m-1" href="https://mail.google.com/mail/" role="button"><i
+              class="fab fa-google"></i></a>
+
+          <!-- Instagram -->
+          <a class="btn btn-outline-light btn-floating m-1" href="https://www.instagram.com/" role="button"><i
+              class="fab fa-instagram"></i></a>
+
+          <!-- Linkedin -->
+          <a class="btn btn-outline-light btn-floating m-1" href="https://pk.linkedin.com/" role="button"><i
+              class="fab fa-linkedin-in"></i></a>
+
+          <!-- Github -->
+          <a class="btn btn-outline-light btn-floating m-1" href="https://github.com/login" role="button"><i
+              class="fab fa-github"></i></a>
+        </section>
+        <!-- Section: Social media -->
+
+        <!-- Section: Form -->
+        <section class="">
+          <form action="">
+            <!--Grid row-->
+            <div class="row d-flex justify-content-center">
+              <!--Grid column-->
+              <div class="col-auto">
+                <p class="pt-2">
+                  <strong>Sign up for our newsletter</strong>
+                </p>
+              </div>
+              <!--Grid column-->
+
+              <!--Grid column-->
+              <div class="col-md-5 col-12">
+                <!-- Email input -->
+                <div class="form-outline form-white mb-4">
+                  <input type="email" id="form5Example21" class="form-control" />
+                  <label class="form-label" for="form5Example21">Email address</label>
+                </div>
+              </div>
+              <!--Grid column-->
+
+              <!--Grid column-->
+              <div class="col-auto">
+                <!-- Submit button -->
+                <button type="submit" class="btn btn-outline-light mb-4" href="contact.html">
+                  Subscribe
+                </button>
+              </div>
+              <!--Grid column-->
+            </div>
+            <!--Grid row-->
+          </form>
+        </section>
+
+        <!-- Section: Text -->
+
+        <!-- Section: Links -->
+        <section class="">
+          <!--Grid row-->
+          <div class="row">
+            <!--Grid column-->
+            <div class="col-lg-3 col-md-6 mb-4 mb-md-0">
+              <h6 class="text-uppercase fw-bold mb-4">
+                <i class="fas fa-gem me-3"></i>Conversion Wizard
+              </h6>
+              <p>
+                "Our mission is to simplify and standardize metric conversions for individuals and businesses worldwide.
+                Through our user-friendly platform, we provide accurate measurement conversions that
+                eliminate errors and confusion in scientific, industrial, and everyday applications."
+              </p>
+
+            </div>
+            <!--Grid column-->
+
+            <!--Grid column-->
+            <div class="col-lg-3 col-md-6 mb-4 mb-md-0" >
+              <h6 class="text-uppercase fw-bold mb-4">link</h6>
+              <p>
+                <a href="home.html" class="text-reset-primary">Home</a>
+              </p>
+              <p>
+                <a href="articles.html" class="text-reset-primary">Articles</a>
+              </p>
+              <p>
+                <a href="history.html" class="text-reset-primary">History</a>
+              </p>
+              <p>
+                <a href="chart.html" class="text-reset-primary">Charts</a>
+              </p>
+              <p>
+                <a href="faq1.html" class="text-reset-primary">FAQ's</a>
+              </p>
+              <p>
+                <a href="about.html" class="text-reset-primary">About</a>
+              </p>
+            </div>
+            <!--Grid column-->
+
+            <!--Grid column-->
+            <div class="col-lg-3 col-md-6 mb-4 mb-md-0">
+              <h6 class="text-uppercase fw-bold mb-4">Converter
+
+              </h6>
+
+              <p>
+                <a href="converter.html#q1" class="text-reset-primary">Mass</a>
+              </p>
+              <p>
+                <a href="converter.html#q12" class="text-reset-primary">Area</a>
+              </p>
+              <p>
+                <a href="converter.html#q10" class="text-reset-primary">Volume</a>
+              </p>
+              <p>
+                <a href="#q14converter.html" class="text-reset-primary">Length</a>
+              </p>
+              <p>
+                <a href="converter.html#q6" class="text-reset-primary">Temperature</a>
+              </p>
+              <p>
+                <a href="converter.html#q8" class="text-reset-primary">Currency</a>
+              </p>
+            </div>
+            <!--Grid column-->
+
+            <!--Grid column-->
+            <div class="col-lg-3 col-md-6 mb-4 mb-md-0">
+              <h6 class="text-uppercase fw-bold mb-4">Contact</h6>
+
+              <p><i class="fas fa-home me-3"></i> New York, NY 10012, US</p>
+              <p>
+                <i class="fas fa-envelope me-3"></i>
+                info@example.com
+              </p>
+              <p><i class="fas fa-phone me-3"></i> + 01 234 567 88</p>
+              <p><i class="fas fa-print me-3"></i> + 01 234 567 89</p>
+            </div>
+            <!--Grid column-->
+          </div>
+          <!--Grid row-->
+        </section>
+        <!-- Section: Links -->
+      </div>
+      <!-- Grid container -->
+
+      <!-- Copyright -->
+      <div class="text-center p-3" style="background-color: rgba(0, 0, 0, 0.2);">
+        © 2020 Copyright:
+        <a class="text-white" href="home.html">Conversion Wizard</a>
+      </div>
+      <!-- Copyright -->
+    </footer>
+</body>
+
+</html>

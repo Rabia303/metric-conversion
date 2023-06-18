@@ -1,0 +1,546 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Article</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD" crossorigin="anonymous">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+        <script src="https://code.jquery.com/jquery-2.2.4.min.js" integrity="sha256-BbhdlvQf/xTY9gja0Dq3HiwQF8LaCRTXxZKRutelT44="
+        crossorigin="anonymous"></script>
+        <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" rel="stylesheet" type="text/css"/>
+        <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.bundle.min.js" type="text/javascript"></script>
+        <script src="https://kit.fontawesome.com/d49b90c6aa.js" crossorigin="anonymous"></script>
+        
+    </head>
+<style>
+    
+    body {
+        background: linear-gradient(90deg, #b460a8, plum);
+    }
+
+    body,
+    p {
+      
+        font-family: "Times New Roman", Times, serif;
+        font-style: italic;
+    }
+
+</style>
+
+<body>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-w76AqPfDkMBDXo30jS1Sgez6pr3x5MlQ1ZAGC+nuZB+EYdgRZgiwxhTBTkF7CXvN"
+        crossorigin="anonymous"></script>
+         
+<script type="text/javascript">
+    $(document).ready(function() {
+        $(document).on('click', '.dropdown-menu', function (e) {
+          e.stopPropagation();
+        });
+    
+        if ($(window).width() < 992) {
+          $('.dropdown-menu a').click(function(e){
+            e.preventDefault();
+              if($(this).next('.submenu').length){
+                $(this).next('.submenu').toggle();
+              }
+              $('.dropdown').on('hide.bs.dropdown', function () {
+             $(this).find('.submenu').hide();
+          })
+          });
+      }
+      
+    });
+    </script>
+    
+    <style type="text/css">
+      @media (min-width: 992px){
+        .dropdown-menu .dropdown-toggle:after{
+          border-top: .3em solid transparent;
+            border-right: 0;
+            border-bottom: .3em solid transparent;
+            border-left: .3em solid;
+        }
+    
+        .dropdown-menu .dropdown-menu{
+          margin-left:0; margin-right: 0;
+        }
+    
+        .dropdown-menu li{
+          position: relative;
+        }
+        .nav-item .submenu{ 
+          display: none;
+          position: absolute;
+          left:100%; top:-7px;
+        }
+        .nav-item .submenu-left{ 
+          right:100%; left:auto;
+        }
+    
+        .dropdown-menu > li:hover{ background-color: #f1f1f1 }
+        .dropdown-menu > li:hover > .submenu{
+          display: block;
+        }
+      }
+    </style>
+    </head>
+    <body >
+    
+    
+    <div class = "container-lg " style="width: auto;">
+    
+    <nav class="navbar navbar-expand-lg navbar-dark "  style=" background: #063247;box-shadow: 0 3px 15px rgba(0,0,0,0.4);
+    
+     z-index: 10; font-family: 'Times New Roman', Times, serif" >
+    
+      <a class="navbar-brand" href="home.html" style=" font-size: 1.009em
+      ;
+      font-weight: bold;">Conversion Wizard</a>
+      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#main_nav">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="main_nav">
+    
+    <ul class="navbar-nav  ml-auto">
+      <li class="nav-item active"> <a class="nav-link" href="home.html">Home </a> </li>
+      <li class="nav-item active"><a class="nav-link" href="about.html"> About </a></li>
+      <li class="nav-item dropdown active">
+        <a class="nav-link dropdown-toggle" href="#" data-toggle="dropdown"> Explore </a>
+          <ul class="dropdown-menu">
+          <li><a class="dropdown-item" href="articles.html"> Articles </a></li>
+          <li><a class="dropdown-item" href="history.html"> History </a></li>
+          <li><a class="dropdown-item" href="chart.html"> Charts </a></li>
+          <li><a class="dropdown-item" href="faq1.html"> FAQ's </a>
+          </ul>
+      </li>
+      <li class="nav-item dropdown active">
+        <a class="nav-link dropdown-toggle" href="converter.html" data-toggle="dropdown"> Converter  </a>
+          <ul class="dropdown-menu">
+              <li><a class="dropdown-item dropdown-toggle" href="converter.html#q1"> Mass </a>
+                <ul class="submenu dropdown-menu">
+                 <li><a class="dropdown-item"  href="converter.html#q1">kg to £</a></li>
+                 <li><a class="dropdown-item" href="converter.html#q2">£ to kg</a></li>
+                 <li><a class="dropdown-item"  href="converter.html#q3">oz. to gm</a></li>
+                 <li><a class="dropdown-item" href="converter.html#q4">gm to oz.</a></li>
+                
+              </ul>
+           </li>
+          <li><a class="dropdown-item dropdown-toggle" href="converter.html#q6"> Temperature </a>
+             <ul class="submenu dropdown-menu">
+              <li><a class="dropdown-item" href="converter.html#q6">°C to °F</a></li>
+              <li><a class="dropdown-item" href="converter.html#q7">°F to °C</a></li>
+           
+           </ul>
+          </li>
+          <li><a class="dropdown-item dropdown-toggle" href="converter.html#q8"> Currency </a>
+             <ul class="submenu dropdown-menu">
+              <li><a class="dropdown-item"  href="converter.html#q8">$ to ₨</a></li>
+              <li><a class="dropdown-item" href="converter.html#q9">₨ to $</a></li>
+              
+           </ul>
+          </li>
+          <li><a class="dropdown-item dropdown-toggle" href="converter.html#q10"> Volume</a>
+             <ul class="submenu dropdown-menu">
+              <li><a class="dropdown-item" href="converter.html#q10">yd3 to mᶟ</a></li>
+              <li><a class="dropdown-item" href="converter.html#q11">gal to L</a></li>
+             
+           </ul>
+          </li>
+              <li><a class="dropdown-item dropdown-toggle" href="converter.html#q12"> Area</a>
+                <ul class="submenu dropdown-menu">
+                 <li><a class="dropdown-item" href="converter.html#q12">ac to ha</a></li>
+                 <li><a class="dropdown-item" href="converter.html#q13"> sq. ft. to m2</a></li>
+                
+              </ul>
+           </li>
+           <li><a class="dropdown-item dropdown-toggle" href="converter.html#q14"> length</a>
+            <ul class="submenu dropdown-menu">
+             <li><a class="dropdown-item" href="converter.html#q14">m to km</a></li>
+             <li><a class="dropdown-item" href="converter.html#q15">in to mm</a></li>
+            
+          </ul>
+       </li>
+          </ul>
+      </li>
+        <li class="nav-item active"> <a class="nav-link" href="contact.html">Contact </a> </li>
+    </ul>
+    </nav>
+        <br> <br> <br> <br>
+    <CENTER>
+        <h1>ARTICLES</h1>
+    </CENTER>
+    <br><br>
+    <div class="container">
+        <div id="X">
+            <div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel">
+               
+                <div class="carousel-inner">
+                    <div class="carousel-item active">
+                        <img class="d-block w-100" src="p8.jpg" >
+                       
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    </div>
+    <div class="container">
+        <p>
+            <center>
+                <h1> The SI System </h1>
+            </center>
+        <h3>Introduction to the SI System</h3>
+        The International System of Units, commonly referred to as the SI system, is the modern system of measurement
+        used around the world. It was established in 1960 by the General Conference on Weights and Measures and has
+        since been adopted as the standard system of measurement in nearly all countries.
+        </p>
+        <h3> Advantages of the SI System</h3>
+        <p> One of the key benefits of the SI system is its consistency and uniformity. Because it is used globally,
+            there
+            is no confusion between measurements in different countries, making it ideal for scientific and technical
+            applications.</p>
+
+        <p> Additionally, the SI system is based on a decimal system, making it easier to perform mathematical
+            operations
+            and reducing the risk of errors in calculations. It is also flexible, allowing new units to be added as
+            needed
+            to accommodate advancements in technology and science.</p>
+
+        <p>
+        <h3>The Seven Base Units of the SI System</h3>
+        <p> The SI system is based on seven base units, each defined as a specific physical quantity:</p>
+
+        <p>1. Meter (m) - The meter is used to measure length.</p>
+        <p> 2.Kilogram (kg) - The kilogram is used to measure mass.</p>
+        <p>3.Second (s) - The second is used to measure time.</p>
+        <p> 4.Ampere (A) - The ampere is used to measure electric current.</p>
+        <p> 5. Kelvin (K) - The kelvin is used to measure temperature.</p>
+        <p> 6.Mole (mol) - The mole is used to measure the amount of a substance.</p>
+        <p> 7.Candela (cd) - The candela is used to measure luminous intensity.</p>
+        <h3> Derived Units in the SI System</h3>
+        <p> In addition to the seven base units, there are many other units in the SI system that are derived from these
+            base units. Some of the most common derived units include:</p>
+
+        <p> * Hertz (Hz) - Used to measure frequency.</p>
+        <p> *Newton (N) - Used to measure force.</p>
+        <p> * Pascal (Pa) - Used to measure pressure.</p>
+        <p> * Watt (W) - Used to measure power.</p>
+        <p> * Coulomb (C) - Used to measure electric charge.</p>
+        <p> * Radian (rad) - Used to measure angles in mathematics and physics.</p>
+        <h3> Conclusion</h3>
+        <p> In conclusion, the SI system is the globally recognized standard for measurement and has numerous advantages
+            over other systems of measurement. Its uniformity, consistency, and flexibility make it ideal for a wide
+            range
+            of applications, from scientific research to everyday life. Whether you're a scientist, engineer, or just
+            someone who wants to make accurate measurements, understanding the SI system is an important step towards
+            achieving that goal.</p>
+        <div class="carousel-inner">
+            <div class="carousel-item active">
+               
+               <img class="d-block w-100" src="p12.jpg" >
+        </div>
+       
+    </div><br><br><br><br>
+    <div class="container">
+        <center>
+            <h1>Metric System</h1>
+        </center>
+        <h3>Introduction to the Various Metric Systems</h3>
+        <p>The metric system, also known as the International System of Units (SI), is a system of measurement that is
+            used
+            in many countries around the world. However, there are several different versions of the metric system that
+            have
+            been developed over time, each with their own unique features and purposes. In this article, we will take a
+            closer look at the different metric systems and highlight the key differences between them.</p>
+
+        <h3>The Original Metric System</h3>
+        <p> The original metric system was developed in France in the late 18th century as a way to standardize
+            measurement
+            across the country. The system was based on a decimal system of units, with units for length, weight, and
+            capacity defined in terms of multiples of ten. This made it easy for people to convert between different
+            units
+            of measure, and the system quickly became popular throughout France and other countries.</p>
+
+        <h3>The SI System</h3>
+        <p>The SI system, or Système International d'Unités, is a more recent version of the mof the metric system that
+            was
+            developed in the late 20th century. The SI system is based on the original metric system, but it includes
+            additional units and definitions to accommodate advances in science and technology. The SI system is now
+            used as
+            the standard system of measurement in many countries, and it is recognized as the official system of units
+            by
+            the International System of Units.</p>
+
+        <h3>The CGS System</h3>
+        <p>The CGS system, or Centimeter-Gram-Second system, is a version of the metric system that was developed for
+            use
+            in physics and engineering. The CGS system is based on units of length, mass, and time, and it is commonly
+            used
+            in scientific research and calculations. Unlike the SI system, which is based on multiples of ten, the CGS
+            system is based on multiples of one, which makes it well-suited for scientific work.</p>
+
+        <h3>The MKS System</h3>
+        <p> The MKS system, or Meter-Kilogram-Second system, is another version of the metric system that was developed
+            for
+            use in engineering and technology. The MKS system is based on units of length, mass, and time, and it is
+            similar
+            to the SI system in many ways. However, the MKS system includes additional units for force and energy, which
+            make it well-suited for use in engineering and technology.</p>
+        <h3> Conclusion</h3>
+        <p>In conclusion, the various metric systems each have their own unique features and purposes. The original
+            metric
+            system was developed as a way to standardize measurement across France, while the SI system is now used as
+            the
+            standard system of measurement in many countries. The CGS and MKS systems are designed specifically for use
+            in
+            physics and engineering, respectively. Regardless of which system you use, it is important to have a clear
+            understanding of the differences between the various metric systems in order to use them effectively.</p>
+        <div class="carousel-inner">
+            <div class="carousel-item active">
+                <img class="d-block w-100" src="pa.jpg" >
+            </div>
+        </div>
+    </div><br><br><br><br>
+    <div class="container">
+        <center>
+            <h1>The Metric System</h1>
+        </center>
+        <h2> The Meter: The Foundation of the Metric System</h2>
+        <h3>Introduction to the Meter</h3>
+        <p>The meter is a unit of length that is part of the International System of Units (SI). It was first defined in
+            1799 as one ten-millionth of the distance from the equator to the North Pole. The meter has undergone
+            several changes throughout history, but it remains an essential part of the metric system used today.</p>
+        <h3>The Definition of the Meter</h3>
+        <p>The modern definition of the meter is the length of the path travelled by light in vacuum during a time
+            interval of 1/299,792,458 of a second. This definition was adopted in 1983 and made the meter a more precise
+            and internationally standardized unit of measurement.</p>
+        <h3>The Evolution of the Meter</h3>
+        <p>The meter has gone through several changes throughout history. Initially, it was defined as one ten-millionth
+            of the distance from the equator to the North Pole. This definition was later changed to the length of a
+            platinum-iridium bar kept at the International Bureau of Weights and Measures (BIPM) in France. With the
+            advent of technology, the definition of the meter was changed to the speed of light in vacuum.</p>
+        <h3>The Importance of the Meter in the Metric System</h3>
+        <p>The meter is the foundation of the metric system and serves as the base unit for measuring length. Other
+            units in the metric system, such as the kilometer, are derived from the meter. The standardization of the
+            meter ensures that measurements are accurate and consistent around the world, making it an essential part of
+            international trade and commerce.</p>
+        <h3>Conclusion</h3>
+        <p>The meter has come a long way from its initial definition as one ten-millionth of the distance from the
+            equator to the North Pole. Today, it is a precise and internationally standardized unit of measurement,
+            providing a foundation for the metric system. The meter plays a crucial role in facilitating accurate and
+            consistent measurements, making it an essential part of modern life.</p>
+        <div class="carousel-inner">
+            <div class="carousel-item active">
+                <img class="d-block w-100" src="pb.jpg">
+            </div>
+        </div>
+    </div><br><br><br><br>
+    <div class="container">
+        <center>
+            <h1>Traditional U.S. Units</h1>
+        </center>
+        <h2>Traditional U.S. Units of Measurement</h2>
+        <p>The United States is one of the few countries that does not use the metric system as its primary system of
+            measurement. Instead, it uses a mix of customary units that have been passed down from generation to
+            generation. In this article, we will explore the traditional units of measurement used in the United States
+            and their origins.</p>
+        <h3>The History of U.S. Customary Units</h3>
+        <p>The history of U.S. customary units can be traced back to colonial times when the British Empire dominated
+            much of the world. At that time, British units of measurement were used in the American colonies. After the
+            American Revolution, the new nation had to define its own standards of measurement and established a system
+            of units that was based on the British system but adapted to suit the needs of the growing nation.</p>
+        <h3>Length Measurements</h3>
+        <p>The most common length measurement used in the United States is the inch, which is equal to 2.54 centimeters.
+            A foot, which is equal to 12 inches, is also commonly used. For longer distances, the yard, which is equal
+            to 3 feet, and the mile, which is equal to 5,280 feet, are used.</p>
+        <h3>Volume Measurements</h3>
+        <p>For measuring liquids, the customary unit of measurement is the fluid ounce, which is equal to 29.5735
+            milliliters. The gallon, which is equal to 128 fluid ounces, is also commonly used.</p>
+        <h3>Weight Measurements</h3>
+        <p>The traditional unit of measurement for weight in the United States is the pound, which is equal to 0.45359
+            kilograms. For larger quantities of weight, the ton, which is equal to 2,000 pounds, is used.</p>
+        <h3>Conclusion</h3>
+        <p>Traditional U.S. units of measurement have a rich history and have been a part of American culture for
+            generations. Although the metric system is widely used around the world, the United States continues to use
+            its customary units for day-to-day measurements. This article provides a brief overview of the traditional
+            units of measurement used in the United States, their origins, and their common uses.</p>
+        <div class="carousel-inner">
+            <div class="carousel-item active">
+                <img class="d-block w-100" src="p9.jpg">
+            </div>
+        </div>
+    </div>
+    <br><br><br>
+   <!-- Footer -->
+   <footer class="bg-dark text-center text-white  container-fluid">
+    <!-- Grid container -->
+    <div class="container p-4">
+      <!-- Section: Social media -->
+      <section class="mb-4">
+        <!-- Facebook -->
+        <a class="btn btn-outline-light btn-floating m-1" href="https://www.facebook.com/" role="button"><i
+            class="fab fa-facebook-f"></i></a>
+
+        <!-- Twitter -->
+        <a class="btn btn-outline-light btn-floating m-1" href="https://twitter.com/i/flow/signup" role="button"><i
+            class="fab fa-twitter"></i></a>
+
+        <!-- Google -->
+        <a class="btn btn-outline-light btn-floating m-1" href="https://mail.google.com/mail/" role="button"><i
+            class="fab fa-google"></i></a>
+
+        <!-- Instagram -->
+        <a class="btn btn-outline-light btn-floating m-1" href="https://www.instagram.com/" role="button"><i
+            class="fab fa-instagram"></i></a>
+
+        <!-- Linkedin -->
+        <a class="btn btn-outline-light btn-floating m-1" href="https://pk.linkedin.com/" role="button"><i
+            class="fab fa-linkedin-in"></i></a>
+
+        <!-- Github -->
+        <a class="btn btn-outline-light btn-floating m-1" href="https://github.com/login" role="button"><i
+            class="fab fa-github"></i></a>
+      </section>
+      <!-- Section: Social media -->
+
+      <!-- Section: Form -->
+      <section class="">
+        <form action="">
+          <!--Grid row-->
+          <div class="row d-flex justify-content-center">
+            <!--Grid column-->
+            <div class="col-auto">
+              <p class="pt-2">
+                <strong>Sign up for our newsletter</strong>
+              </p>
+            </div>
+            <!--Grid column-->
+
+            <!--Grid column-->
+            <div class="col-md-5 col-12">
+              <!-- Email input -->
+              <div class="form-outline form-white mb-4">
+                <input type="email" id="form5Example21" class="form-control" />
+                <label class="form-label" for="form5Example21">Email address</label>
+              </div>
+            </div>
+            <!--Grid column-->
+
+            <!--Grid column-->
+            <div class="col-auto">
+              <!-- Submit button -->
+              <button type="submit" class="btn btn-outline-light mb-4" href="contact.html">
+                Subscribe
+              </button>
+            </div>
+            <!--Grid column-->
+          </div>
+          <!--Grid row-->
+        </form>
+      </section>
+
+      <!-- Section: Text -->
+
+      <!-- Section: Links -->
+      <section class="">
+        <!--Grid row-->
+        <div class="row">
+          <!--Grid column-->
+          <div class="col-lg-3 col-md-6 mb-4 mb-md-0">
+            <h6 class="text-uppercase fw-bold mb-4">
+              <i class="fas fa-gem me-3"></i>Conversion Wizard
+            </h6>
+            <p>
+              "Our mission is to simplify and standardize metric conversions for individuals and businesses worldwide.
+              Through our user-friendly platform, we provide accurate measurement conversions that
+              eliminate errors and confusion in scientific, industrial, and everyday applications."
+            </p>
+
+          </div>
+          <!--Grid column-->
+
+          <!--Grid column-->
+          <div class="col-lg-3 col-md-6 mb-4 mb-md-0" >
+            <h6 class="text-uppercase fw-bold mb-4">link</h6>
+            <p>
+              <a href="home.html" class="text-reset-primary">Home</a>
+            </p>
+            <p>
+              <a href="articles.html" class="text-reset-primary">Articles</a>
+            </p>
+            <p>
+              <a href="history.html" class="text-reset-primary">History</a>
+            </p>
+            <p>
+              <a href="chart.html" class="text-reset-primary">Charts</a>
+            </p>
+            <p>
+              <a href="faq1.html" class="text-reset-primary">FAQ's</a>
+            </p>
+            <p>
+              <a href="about.html" class="text-reset-primary">About</a>
+            </p>
+          </div>
+          <!--Grid column-->
+
+          <!--Grid column-->
+          <div class="col-lg-3 col-md-6 mb-4 mb-md-0">
+            <h6 class="text-uppercase fw-bold mb-4">Converter
+
+            </h6>
+
+            <p>
+              <a href="converter.html#q1" class="text-reset-primary">Mass</a>
+            </p>
+            <p>
+              <a href="converter.html#q12" class="text-reset-primary">Area</a>
+            </p>
+            <p>
+              <a href="converter.html#q10" class="text-reset-primary">Volume</a>
+            </p>
+            <p>
+              <a href="#q14converter.html" class="text-reset-primary">Length</a>
+            </p>
+            <p>
+              <a href="converter.html#q6" class="text-reset-primary">Temperature</a>
+            </p>
+            <p>
+              <a href="converter.html#q8" class="text-reset-primary">Currency</a>
+            </p>
+          </div>
+          <!--Grid column-->
+
+          <!--Grid column-->
+          <div class="col-lg-3 col-md-6 mb-4 mb-md-0">
+            <h6 class="text-uppercase fw-bold mb-4">Contact</h6>
+
+            <p><i class="fas fa-home me-3"></i> New York, NY 10012, US</p>
+            <p>
+              <i class="fas fa-envelope me-3"></i>
+              info@example.com
+            </p>
+            <p><i class="fas fa-phone me-3"></i> + 01 234 567 88</p>
+            <p><i class="fas fa-print me-3"></i> + 01 234 567 89</p>
+          </div>
+          <!--Grid column-->
+        </div>
+        <!--Grid row-->
+      </section>
+      <!-- Section: Links -->
+    </div>
+    <!-- Grid container -->
+
+    <!-- Copyright -->
+    <div class="text-center p-3" style="background-color: rgba(0, 0, 0, 0.2);">
+      © 2020 Copyright:
+      <a class="text-white" href="home.html">Conversion Wizard</a>
+    </div>
+    <!-- Copyright -->
+  </footer>
+</body>
+
+</html>

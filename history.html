@@ -1,0 +1,695 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>History</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD" crossorigin="anonymous">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+        <script src="https://code.jquery.com/jquery-2.2.4.min.js" integrity="sha256-BbhdlvQf/xTY9gja0Dq3HiwQF8LaCRTXxZKRutelT44="
+        crossorigin="anonymous"></script>
+        <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" rel="stylesheet" type="text/css"/>
+        <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.bundle.min.js" type="text/javascript"></script>
+        <script src="https://kit.fontawesome.com/d49b90c6aa.js" crossorigin="anonymous"></script>
+        
+  
+<style>
+  body {
+    background: linear-gradient(90deg, #b460a8, plum);
+  }
+
+  body,
+  p {
+   
+    font-family: "Times New Roman", Times, serif;
+    font-style: italic;
+    
+  }
+h1,h2,h3{
+  text-transform: capitalize;
+}
+
+</style>
+
+<!-- 
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-w76AqPfDkMBDXo30jS1Sgez6pr3x5MlQ1ZAGC+nuZB+EYdgRZgiwxhTBTkF7CXvN"
+    crossorigin="anonymous"></script> -->
+  
+<script type="text/javascript">
+  $(document).ready(function() {
+      $(document).on('click', '.dropdown-menu', function (e) {
+        e.stopPropagation();
+      });
+  
+      if ($(window).width() < 992) {
+        $('.dropdown-menu a').click(function(e){
+          e.preventDefault();
+            if($(this).next('.submenu').length){
+              $(this).next('.submenu').toggle();
+            }
+            $('.dropdown').on('hide.bs.dropdown', function () {
+           $(this).find('.submenu').hide();
+        })
+        });
+    }
+    
+  });
+  </script>
+  
+  <style type="text/css">
+    @media (min-width: 992px){
+      .dropdown-menu .dropdown-toggle:after{
+        border-top: .3em solid transparent;
+          border-right: 0;
+          border-bottom: .3em solid transparent;
+          border-left: .3em solid;
+      }
+  
+      .dropdown-menu .dropdown-menu{
+        margin-left:0; margin-right: 0;
+      }
+  
+      .dropdown-menu li{
+        position: relative;
+      }
+      .nav-item .submenu{ 
+        display: none;
+        position: absolute;
+        left:100%; top:-7px;
+      }
+      .nav-item .submenu-left{ 
+        right:100%; left:auto;
+      }
+  
+      .dropdown-menu > li:hover{ background-color: #f1f1f1 }
+      .dropdown-menu > li:hover > .submenu{
+        display: block;
+      }
+    }
+  </style>
+  
+  <body >
+  
+  
+  <div class = "container-lg " style="width: auto;">
+  
+  <nav class="navbar navbar-expand-lg navbar-dark "  style=" background: #063247;box-shadow: 0 3px 15px rgba(0,0,0,0.4);
+  
+   z-index: 10;font-family: 'Times New Roman', Times, serif" >
+  
+    <a class="navbar-brand" href="home.html" style=" font-size: 1.009em
+    ;
+    font-weight: bold;">Conversion Wizard</a>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#main_nav">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="main_nav">
+  
+  <ul class="navbar-nav  ml-auto">
+    <li class="nav-item active"> <a class="nav-link" href="home.html">Home </a> </li>
+    <li class="nav-item active"><a class="nav-link" href="about.html"> About </a></li>
+    <li class="nav-item dropdown active">
+      <a class="nav-link dropdown-toggle" href="#" data-toggle="dropdown">  Explore  </a>
+        <ul class="dropdown-menu">
+        <li><a class="dropdown-item" href="articles.html"> Articles </a></li>
+        <li><a class="dropdown-item" href="history.html"> History </a></li>
+        <li><a class="dropdown-item" href="chart.html"> Charts </a></li>
+        <li><a class="dropdown-item" href="faq1.html"> FAQ's </a>
+        </ul>
+    </li>
+    <li class="nav-item dropdown active">
+      <a class="nav-link dropdown-toggle" href="converter.html" data-toggle="dropdown"> Converter  </a>
+        <ul class="dropdown-menu">
+            <li><a class="dropdown-item dropdown-toggle" href="converter.html#q1"> Mass </a>
+              <ul class="submenu dropdown-menu">
+               <li><a class="dropdown-item"  href="converter.html#q1">kg to £</a></li>
+               <li><a class="dropdown-item" href="converter.html#q2">£ to kg</a></li>
+               <li><a class="dropdown-item"  href="converter.html#q3">oz. to gm</a></li>
+               <li><a class="dropdown-item" href="converter.html#q4">gm to oz.</a></li>
+              
+            </ul>
+         </li>
+        <li><a class="dropdown-item dropdown-toggle" href="converter.html#q6"> Temperature </a>
+           <ul class="submenu dropdown-menu">
+            <li><a class="dropdown-item" href="converter.html#q6">°C to °F</a></li>
+            <li><a class="dropdown-item" href="converter.html#q7">°F to °C</a></li>
+         
+         </ul>
+        </li>
+        <li><a class="dropdown-item dropdown-toggle" href="converter.html#q8"> Currency </a>
+           <ul class="submenu dropdown-menu">
+            <li><a class="dropdown-item"  href="converter.html#q8">$ to ₨</a></li>
+            <li><a class="dropdown-item" href="converter.html#q9">₨ to $</a></li>
+            
+         </ul>
+        </li>
+        <li><a class="dropdown-item dropdown-toggle" href="converter.html#q10"> Volume</a>
+           <ul class="submenu dropdown-menu">
+            <li><a class="dropdown-item" href="converter.html#q10">yd3 to mᶟ</a></li>
+            <li><a class="dropdown-item" href="converter.html#q11">gal to L</a></li>
+           
+         </ul>
+        </li>
+            <li><a class="dropdown-item dropdown-toggle" href="converter.html#q12"> Area</a>
+              <ul class="submenu dropdown-menu">
+               <li><a class="dropdown-item" href="converter.html#q12">ac to ha</a></li>
+               <li><a class="dropdown-item" href="converter.html#q13"> sq. ft. to m2</a></li>
+              
+            </ul>
+         </li>
+         <li><a class="dropdown-item dropdown-toggle" href="converter.html#q14"> length</a>
+          <ul class="submenu dropdown-menu">
+           <li><a class="dropdown-item" href="converter.html#q14">m to km</a></li>
+           <li><a class="dropdown-item" href="converter.html#q15">in to mm</a></li>
+          
+        </ul>
+     </li>
+        </ul>
+    </li>
+      <li class="nav-item active"> <a class="nav-link" href="contact.html">Contact </a> </li>
+  </ul></div>
+  </nav>
+  
+     <br> <br> <br> <br>
+     <center>
+      <h1>history of measurement units</h1>
+    </center><br> <br>
+  <div class="container" >
+    <div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel" >
+     
+      <div class="carousel-inner">
+        <div class="carousel-item active">
+          <img class="d-block w-100" src="pz.jpg" alt="First slide" >
+        </div>
+      </a> 
+    </div></div>
+  <div class="container">
+    <p>
+      <center>
+        <h1>Introduction</h1>
+      </center>
+    <p> Measurement is an integral part of human existence. From the time humans first started trading goods, there has
+      been a need for a standardized system of measurement. Throughout history, various systems of measurement have been
+      developed and used, with the goal of making trade and commerce more efficient. Today, the most widely used system
+      of measurement is the International System of Units (SI), which is used in nearly every country in the world.
+      However, many other systems of measurement continue to be used, particularly in specific regions and industries.
+    </p>
+
+    <h2> Area</h2>
+    <p> The earliest known system of measurement for area dates back to ancient Babylon, where land was measured using a
+      unit known as a "gur". The gur was equivalent to the amount of land a plow could till in a single day. Over time,
+      other systems of measurement for area were developed, such as the acre in ancient Rome, and the hectare in France.
+    </p>
+    <h2> history of area measurement:</h2>
+    <h3>Introduction:</h3>
+    <p>Measuring and defining areas has been an important aspect of human civilization for thousands of years. From
+      agriculture and construction to trade and commerce, determining the size of land, buildings, and objects has been
+      crucial in various fields. In this article, we will explore the evolution of area measurement, from ancient times
+      to the present day.</p>
+
+    <h3>Ancient History:</h3>
+    <p>The earliest known concept of area measurement dates back to ancient Egypt, where the unit of measurement was the
+      square cubit, which was equivalent to the length of a man's arm from the elbow to the tip of the middle finger.
+      The ancient Greeks also had their own system of measuring areas, with the unit of measurement being the stremma,
+      which was equivalent to around one-quarter of an acre.</p>
+
+    <h3> Medieval Times:</h3>
+    <p> During medieval times, the unit of measurement for area was the acre, which was defined as the amount of land
+      that
+      could be plowed in one day by a team of oxen. This unit of measurement was widely used in Europe and was later
+      adopted in the United States.</p>
+
+    <h3> The Metric System:</h3>
+    <p>The metric system, also known as the International System of Units (SI), was introduced in France in the late
+      18th
+      century. It was based on the meter, kilogram, and second as its base units, and it included a standardized system
+      for measuring areas in square meters. This system was later adopted by most countries around the world and became
+      the most widely used system for area measurement.</p>
+
+    <h3> Modern Era:</h3>
+    <p> In the modern era, the use of advanced technologies such as satellite imagery and mapping software has made it
+      easier to measure areas accurately. Today, the metric system is used for most scientific, technical, and
+      commercial purposes, while the acre is still commonly used for measuring land areas in the United States and other
+      countries.</p>
+
+    <h3> Conclusion:</h3>
+    <p> The history of area measurement is a testament to the human desire to quantify and understand the world around
+      us.
+      From ancient times to the present day, the evolution of area measurement has been driven by the needs of society,
+      and it has allowed us to make advances in agriculture, construction, trade, and commerce. Today, the metric system
+      is the most widely used system for area measurement, but the legacy of ancient units such as the square cubit and
+      the acre lives on in the history of human civilization.</p>
+      <div class="carousel-inner">
+        <div class="carousel-item active">
+          <img src="pe.jpg" class="d-block w-100" height="700px.width:50%">
+        </div>
+  </div>
+  <div class="container">
+    <h2> Length</h2>
+    <p>The earliest known system of measurement for length dates back to the ancient Egyptians, who used a unit of
+      measurement called the "cubit". The cubit was based on the length of a human arm, from the elbow to the tip of the
+      middle finger. In the late 1700s, the French Academy of Sciences introduced the meter as a standard unit of length
+      in the metric system. The meter was defined as one ten-millionth of the distance from the Earth's equator to the
+      North Pole.</p>
+    <h2> History of Length Measurement</h2>
+
+    <h3> Introduction:</h3>
+    <p>Length is one of the most fundamental measurements in our daily lives and has been the subject of much study and
+      development throughout history. From the earliest days of civilization, humans have sought to measure length
+      accurately to satisfy their various needs, be it for building structures, mapping lands, or conducting trade. In
+      this article, we'll take a journey through history and explore the evolution of length measurement.</p>
+
+    <h3> Early Length Measurements:</h3>
+    <p>Length measurement in ancient times was primarily based on body parts, such as fingers, feet, or arms. For
+      instance,
+      the ancient Egyptians used their fingers as a form of measurement, whereas the Greeks and Romans used the foot as
+      a
+      standard unit of length. However, these measurements were not standardized and varied from one place to another,
+      making it difficult to compare and convert lengths accurately.</p>
+    <h3> The Development of the Metric System:</h3>
+    <p>It wasn't until the late 18th century that a standardized system of length measurement was developed. In 1791,
+      the
+      French Academy of Sciences introduced the metric system, which aimed to provide a standardized and uniform system
+      of
+      measurement across France. The central unit of the metric system was the meter, defined as one ten-millionth of
+      the
+      distance from the equator to the North Pole along the Paris meridian. This standard was later refined in 1889 to
+      be
+      equal to 1,650,763.73 wavelengths of light from the red emission line of krypton-86.</p>
+
+    <h3>Adoption of the Metric System:</h3>
+    <p> The metric system was quickly adopted by many countries around the world and became the standard system of
+      measurement in science, commerce, and trade. Today, the International System of Units (SI), based on the metric
+      system, is the world's most widely used system of measurement.</p>
+
+    <h3> Subdivisions of the Meter:</h3>
+    <p> The meter is divided into 100 smaller units called centimeters, and further divided into millimeters. This
+      allows
+      for precise measurements to be made, as well as making it easier to convert between units.</p>
+
+    <h3> Conclusion:</h3>
+    <p> Length measurement has come a long way since its earliest beginnings, and today the meter, as part of the metric
+      system, is the standard unit of length in most countries around the world. The development of the metric system
+      has
+      provided a uniform and standardized system of length measurement, making it easier to compare and convert lengths
+      accurately, and playing a vital role in scientific, commercial, and trade activities.</p>
+      <div class="carousel-inner">
+        <div class="carousel-item active">
+          <img src="p10.jpg" class="d-block w-100" height="700px.width:50%">
+        </div>
+  </div>
+  <div class="container">
+    <h2> Volume</h2>
+    <p> The earliest known system of measurement for volume dates back to ancient Greece, where a unit of measurement
+      called the "caph" was used. The caph was equivalent to the volume of a cylindrical container with a height equal
+      to its diameter. In the metric system, the liter was introduced as a standard unit of volume.</p>
+    <h2> The History of Volume Measurement </h2>
+
+    <h3> Introduction</h3>
+
+    <p> The measurement of volume, or the amount of space occupied by a substance, has been a crucial aspect of human
+      civilization for centuries. From ancient civilizations to the present day, people have used various units of
+      measurement to quantify the amount of liquids and solids they use and trade. This article will provide a brief
+      history of the evolution of volume measurement, highlighting the various units used throughout history and the
+      reasons behind their development.</p>
+
+    <h3> Ancient Civilizations</h3>
+
+    <p> One of the earliest civilizations to develop a system of volume measurement was the ancient Egyptians. They used
+      a
+      unit of measurement known as the heqat, which was equivalent to about 4.8 liters. The heqat was used to measure
+      grain and other dry goods, and it played a critical role in their economy as they relied heavily on trade and
+      bartering.</p>
+
+    <p> The Greeks also had their own system of volume measurement, using units such as the kotyle, which was equivalent
+      to
+      about 4.1 liters. The Romans later adopted and modified the Greek system, using units such as the amphora, which
+      was
+      used to measure liquids like wine and oil.</p>
+
+    <h3> Medieval Europe</h3>
+
+    <p>During the Middle Ages, Europe saw the development of new units of measurement, including the pint and the
+      gallon.
+      These units were used primarily to measure liquids and were used extensively in trade and commerce. The pint, for
+      example, was used to measure ale and other beverages, while the gallon was used to measure larger volumes of
+      liquids
+      like wine and oil.</p>
+
+    <h3> Adoption of the Metric System</h3>
+
+    <p> In the late 18th and early 19th centuries, the French Revolution led to the widespread adoption of the metric
+      system. The metric system was designed to provide a standardized system of measurement that could be used
+      consistently throughout the world. It was based on the meter, kilogram, and liter, and it quickly became the most
+      widely used system of measurement in the world.</p>
+
+    <h3> Conclusion</h3>
+
+    <p> The history of volume measurement is a fascinating subject that highlights the evolution of human civilization
+      and
+      our ability to measure and quantify the world around us. From the ancient Egyptians to the widespread adoption of
+      the metric system, volume measurement has played a critical role in trade, commerce, and everyday life. Whether
+      you
+      use liters, gallons, or pints, it's important to understand the history of these units and the reasons behind
+      their
+      development.</p>
+      <div class="carousel-inner">
+        <div class="carousel-item active">
+          <img src="pg.jpg" class="d-block w-100" height="700px.width:50%">
+        </div>
+  </div>
+  <div class="container">
+    <h2> Mass</h2>
+    <p> earliest known system of measurement for mass dates back to ancient Egypt, where a unit of measurement called
+      the "deben" was used. The deben was equivalent to approximately 91 grams. In the metric system, the kilogram was
+      introduced as the standard unit of mass. The kilogram was defined as the mass of a specific cylinder of
+      platinum-iridium alloy, kept at the International Bureau of Weights and Measures in France.</p>
+    <h2>HISTORY OF Mass MEASUREMENT</h2>
+    Mass is a fundamental aspect of our physical world and has been the subject of measurement for thousands of years.
+    <p>It is a measure of the amount of matter in an object and is often used in conjunction with weight, which is the
+      force exerted on an object due to gravity. The history of mass measurement is long and complex, reflecting the
+      changing needs of society and the development of new technologies. Here is a brief overview of the history of mass
+      measurement, with subheadings for each significant era of development.</p>
+
+    <h3> Ancient Mass Measurement Systems</h3>
+    <p>The earliest known systems of mass measurement were developed by the ancient civilizations of the Mediterranean,
+      such as the Egyptians and the Greeks. These systems were based on the use of standard weights, such as grains of
+      wheat or barley, and were used primarily for trade and commerce.</p>
+    <h3> The Development of Standard Units of Mass</h3>
+    <p> With the rise of the Roman Empire, standard units of mass were established across much of Europe. The Roman
+      pound,
+      which was based on a standard weight of bronze, became the standard unit of mass in much of the Western world.
+      This standard was maintained for centuries, until the development of new technologies and the growth of trade and
+      commerce made it necessary to develop new, more precise systems of mass measurement.</p>
+    <h3>The Emergence of the Metric System</h3>
+    <p> The metric system, also known as the International System of Units (SI), was developed in France during the late
+      18th and early 19th centuries. This system is based on a standard unit of mass, the kilogram, which was defined as
+      the mass of a particular cylinder of platinum-iridium. The metric system quickly became the dominant system of
+      mass measurement in much of the world, and remains so to this day.</p>
+    <h3> The Advancements of Modern Technology </h3>
+    <p> With the advent of new technologies, such as electronics and the microscale, the need for even more precise
+      systems of mass measurement has arisen. Today, scientists and engineers use a variety of advanced instruments and
+      techniques, such as atomic force microscopes and nanoscale sensors, to measure mass with incredible accuracy.
+      In conclusion, the history of mass measurement reflects the changing needs of society and the advancement of
+      technology. From the earliest systems based on standard weights to the highly precise instruments of today, mass
+      measurement has played a critical role in shaping our understanding of the world and our place in it.</p>
+      <div class="carousel-inner">
+        <div class="carousel-item active">
+          <img src="p0.jpg" class="d-block w-100" height="700px.width:50%">
+        </div>
+  </div>
+  <div class="container">
+    <h2> Temperature </h2>
+    <p> The earliest known system of measurement for temperature dates back to ancient Greece, where a simple scale was
+      used to describe hot and cold. The Fahrenheit scale, which is still used in the United States today, was
+      introduced in the early 1700s by physicist Daniel Fahrenheit. The Celsius scale, which is used in the metric
+      system and most other countries, was introduced in the late 1700s by Swedish astronomer Anders Celsius.</p>
+    History of Temperature Measurement: Understanding the Evolution of Measuring Heat
+
+    <h3> Introduction:</h3>
+    <p>Temperature is an essential aspect of our daily lives and plays a crucial role in many fields including science,
+      engineering, and medicine. Measuring temperature accurately and precisely has been a challenge for centuries, and
+      this article will take a look at the history of temperature measurement, including its evolution and the various
+      methods used over time.</p>
+
+    <h3> The Earliest Forms of Temperature Measurement:</h3>
+    <p> -The earliest forms of temperature measurement date back to ancient civilizations like the Egyptians, who used
+      the
+      temperature of the human body to determine if someone was healthy or not.</p>
+    <p> -The ancient Greeks used the concept of thermal expansion to measure temperature. They filled glass vessels with
+      water and observed the change in volume as the temperature changed.</p>
+
+    <h3> The Development of Thermometers:</h3>
+    <p> -The invention of the thermometer is often credited to Galileo Galilei in the late 16th century, although early
+      forms of thermometers date back to the early 16th century.</p>
+    <p>-Galileo's thermometer was based on the principle of thermal expansion and used the expansion of air in a bulb to
+      measure temperature.</p>
+    <p> -Later, in the 17th century, Sir Robert Boyle improved upon Galileo's design by filling the bulb with mercury,
+      which was a more stable and accurate substance to use.</p>
+
+    <h3>The Fahrenheit and Celsius Scales:</h3>
+    <p> -In 1724, a German physicist and instrument maker named Daniel Gabriel Fahrenheit developed the Fahrenheit
+      temperature scale.</p>
+    <p> -The Celsius scale was developed by Anders Celsius, a Swedish astronomer, in 1742.</p>
+    <p> -The Celsius scale is based on the concept of dividing the temperature difference between the boiling and
+      freezing
+      points of water into 100 equal parts, while the Fahrenheit scale is based on dividing the temperature difference
+      between these two points into 180 equal parts.</p>
+
+    <h3> The Modern Era of Temperature Measurement:</h3>
+    <p>-In the 20th century, advances in technology led to the development of electronic thermometers, which use
+      thermistors or thermocouples to measure temperature.</p>
+    <p> -Today, electronic thermometers are widely used in many industries and fields, including medicine, meteorology,
+      and scientific research.</p>
+
+    <h3>Conclusion:</h3>
+    <p> Temperature measurement has come a long way since its inception, and the methods used to measure temperature
+      have
+      evolved significantly over time. From the earliest forms of temperature measurement in ancient civilizations to
+      the development of thermometers and the modern era of electronic temperature measurement, the history of
+      temperature measurement is a fascinating and important aspect of the evolution of science and technology.</p>
+      <div class="carousel-inner">
+        <div class="carousel-item active">
+          <img src="pj.jpg" class="d-block w-100" height="700px.width:50%">
+        </div>
+  </div>
+  <div class="container">
+   <h2> Currency</h2>
+   <p>The use of currency as a unit of measurement dates back to ancient civilizations, such as the Babylonians and the
+    Egyptians, who used coins made of precious metals as a means of exchange. Over time, other forms of currency were
+    developed, such as paper money, and the use of currency as a unit of measurement became standardized through the
+    use of government-issued coins and notes.</p>
+    <h2> History of Currency Measurement</h2>
+
+    <h2> Introduction:</h2>
+
+    <p> Throughout history, currency has been a crucial aspect of economic transactions, and the measurement of currency has
+    been a critical element in the development of economies. The history of currency measurement can be traced back to
+    ancient civilizations where various commodities were used as a medium of exchange, including cattle, shells, and
+    precious metals like gold and silver.</p>
+
+   <h3> I. Bartering System</h3>
+
+   <p>The bartering system was the first form of currency measurement, where goods and services were exchanged directly
+    without the use of a common medium of exchange. This system was limited by the difficulties in finding two
+    individuals who had goods and services that they both wanted to exchange.</p>
+
+    <h3> II. Commodity Currency</h3>
+
+    <p> With the advancement of trade and commerce, the bartering system became impractical, leading to the development of
+    commodity currency. In this system, a commodity like gold or silver was standardized and used as a medium of
+    exchange. The value of currency was determined by the weight of the commodity, and the measurement of currency was
+    based on weight units like grams or ounces.</p>
+
+    <h3> III. Coinage System</h3>
+
+    <p> The coinage system was a further development of the commodity currency system. Coins were minted from gold, silver,
+    and other metals, and their value was determined by their weight and purity. This system of currency measurement was
+    widely used in ancient Greece, Rome, and China.</p>
+
+    <h3> IV. Paper Currency</h3>
+
+    <p>The use of paper currency became widespread during the medieval period, with the first paper money being issued in
+    China during the 7th century. The value of paper currency was pegged to the value of a commodity, typically gold,
+    and its measurement was based on units like dollars or pounds.</p>
+
+    <h3> V. Modern Currency Measurement</h3>
+
+   <p> With the advent of central banking and the use of electronic money, the measurement of currency has become
+    increasingly standardized. Today, currency is measured in units like dollars, euros, and yen, and its value is
+    determined by the supply and demand for the currency in the global market.</p>
+
+    <h3>  Conclusion:</h3>
+
+    <p>The history of currency measurement has been shaped by the development of trade and commerce and reflects the
+    changing needs and technologies of different civilizations. Today, currency measurement is standardized, and its
+    value is determined by market forces, making it a critical aspect of modern economics.</p>
+    <div class="carousel-inner">
+      <div class="carousel-item active">
+        <img src="ph.jpg" class="d-block w-100" height="700px.width:50%">
+      </div>
+  </div>
+  <div class="container">
+    <h2> Conclusion</h2>
+    <p> The history of measurement units is a rich and diverse one, reflecting the changing needs and desires of societies
+    throughout the ages. While the International System of Units is the most widely used system of measurement today,
+    it is important to remember and appreciate the contributions of the many other systems that have come before it.
+    Whether measuring length, mass, volume, temperature, or currency, the goal remains the same: to provide a
+    standardized system for conducting trade and commerce, and making our daily lives easier and more efficient.</p>
+  </div>
+   <!-- footer starts -->
+   <!-- Footer -->
+   <footer class="bg-dark text-center text-white  container-fluid">
+    <!-- Grid container -->
+    <div class="container p-4">
+      <!-- Section: Social media -->
+      <section class="mb-4">
+        <!-- Facebook -->
+        <a class="btn btn-outline-light btn-floating m-1" href="https://www.facebook.com/" role="button"><i
+            class="fab fa-facebook-f"></i></a>
+
+        <!-- Twitter -->
+        <a class="btn btn-outline-light btn-floating m-1" href="https://twitter.com/i/flow/signup" role="button"><i
+            class="fab fa-twitter"></i></a>
+
+        <!-- Google -->
+        <a class="btn btn-outline-light btn-floating m-1" href="https://mail.google.com/mail/" role="button"><i
+            class="fab fa-google"></i></a>
+
+        <!-- Instagram -->
+        <a class="btn btn-outline-light btn-floating m-1" href="https://www.instagram.com/" role="button"><i
+            class="fab fa-instagram"></i></a>
+
+        <!-- Linkedin -->
+        <a class="btn btn-outline-light btn-floating m-1" href="https://pk.linkedin.com/" role="button"><i
+            class="fab fa-linkedin-in"></i></a>
+
+        <!-- Github -->
+        <a class="btn btn-outline-light btn-floating m-1" href="https://github.com/login" role="button"><i
+            class="fab fa-github"></i></a>
+      </section>
+      <!-- Section: Social media -->
+
+      <!-- Section: Form -->
+      <section class="">
+        <form action="">
+          <!--Grid row-->
+          <div class="row d-flex justify-content-center">
+            <!--Grid column-->
+            <div class="col-auto">
+              <p class="pt-2">
+                <strong>Sign up for our newsletter</strong>
+              </p>
+            </div>
+            <!--Grid column-->
+
+            <!--Grid column-->
+            <div class="col-md-5 col-12">
+              <!-- Email input -->
+              <div class="form-outline form-white mb-4">
+                <input type="email" id="form5Example21" class="form-control" />
+                <label class="form-label" for="form5Example21">Email address</label>
+              </div>
+            </div>
+            <!--Grid column-->
+
+            <!--Grid column-->
+            <div class="col-auto">
+              <!-- Submit button -->
+              <button type="submit" class="btn btn-outline-light mb-4" href="contact.html">
+                Subscribe
+              </button>
+            </div>
+            <!--Grid column-->
+          </div>
+          <!--Grid row-->
+        </form>
+      </section>
+
+      <!-- Section: Text -->
+
+      <!-- Section: Links -->
+      <section class="">
+        <!--Grid row-->
+        <div class="row">
+          <!--Grid column-->
+          <div class="col-lg-3 col-md-6 mb-4 mb-md-0">
+            <h6 class="text-uppercase fw-bold mb-4">
+              <i class="fas fa-gem me-3"></i>Conversion Wizard
+            </h6>
+            <p>
+              "Our mission is to simplify and standardize metric conversions for individuals and businesses worldwide.
+              Through our user-friendly platform, we provide accurate measurement conversions that
+              eliminate errors and confusion in scientific, industrial, and everyday applications."
+            </p>
+
+          </div>
+          <!--Grid column-->
+
+          <!--Grid column-->
+          <div class="col-lg-3 col-md-6 mb-4 mb-md-0" >
+            <h6 class="text-uppercase fw-bold mb-4">link</h6>
+            <p>
+              <a href="home.html" class="text-reset-primary">Home</a>
+            </p>
+            <p>
+              <a href="articles.html" class="text-reset-primary">Articles</a>
+            </p>
+            <p>
+              <a href="history.html" class="text-reset-primary">History</a>
+            </p>
+            <p>
+              <a href="chart.html" class="text-reset-primary">Charts</a>
+            </p>
+            <p>
+              <a href="faq1.html" class="text-reset-primary">FAQ's</a>
+            </p>
+            <p>
+              <a href="about.html" class="text-reset-primary">About</a>
+            </p>
+          </div>
+          <!--Grid column-->
+
+          <!--Grid column-->
+          <div class="col-lg-3 col-md-6 mb-4 mb-md-0">
+            <h6 class="text-uppercase fw-bold mb-4">Converter
+
+            </h6>
+
+            <p>
+              <a href="converter.html#q1" class="text-reset-primary">Mass</a>
+            </p>
+            <p>
+              <a href="converter.html#q12" class="text-reset-primary">Area</a>
+            </p>
+            <p>
+              <a href="converter.html#q10" class="text-reset-primary">Volume</a>
+            </p>
+            <p>
+              <a href="#q14converter.html" class="text-reset-primary">Length</a>
+            </p>
+            <p>
+              <a href="converter.html#q6" class="text-reset-primary">Temperature</a>
+            </p>
+            <p>
+              <a href="converter.html#q8" class="text-reset-primary">Currency</a>
+            </p>
+          </div>
+          <!--Grid column-->
+
+          <!--Grid column-->
+          <div class="col-lg-3 col-md-6 mb-4 mb-md-0">
+            <h6 class="text-uppercase fw-bold mb-4">Contact</h6>
+
+            <p><i class="fas fa-home me-3"></i> New York, NY 10012, US</p>
+            <p>
+              <i class="fas fa-envelope me-3"></i>
+              info@example.com
+            </p>
+            <p><i class="fas fa-phone me-3"></i> + 01 234 567 88</p>
+            <p><i class="fas fa-print me-3"></i> + 01 234 567 89</p>
+          </div>
+          <!--Grid column-->
+        </div>
+        <!--Grid row-->
+      </section>
+      <!-- Section: Links -->
+    </div>
+    <!-- Grid container -->
+
+    <!-- Copyright -->
+    <div class="text-center p-3" style="background-color: rgba(0, 0, 0, 0.2);">
+      © 2020 Copyright:
+      <a class="text-white" href="home.html">Conversion Wizard</a>
+    </div>
+    <!-- Copyright -->
+  </footer>
+<!-- 
+  </div> -->
+  <!-- End of .container -->
+</body>
+
+</html>

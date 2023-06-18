@@ -1,0 +1,100 @@
+
+.container{
+    margin: 0.40px;
+    max-width: 600px;
+    flex-direction: column;
+    gap: 20px;
+   
+}
+
+.container h1{
+    color: #333;
+}
+.container .tab{
+    position: relative;
+    background: #9DD9F3;
+    padding: 0 20px 20px;
+    box-shadow: 0 15px 25px rgba(0, 0, 0, 0.05);
+    border-radius: 5px;
+    overflow: hidden;
+}
+.container .tab input{
+    appearance: none;
+}
+.container .tab label{
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+}
+.container .tab label::after{
+    content: '+';
+    position: absolute;
+    right: 20px; 
+    font-size: 2cm;
+    color: rgba(0, 0, 0, 0.1);
+    transition: transform 1s;
+}
+.container .tab:hover label::after{
+color: #333;
+}
+.container .tab input:checked ~ label::after{
+transform: rotate(135deg);
+}
+.container .tab label h2{
+width:40px ;
+height: 40px;
+display: flex;
+justify-content: center;
+align-items: center;
+color: #fff;
+font-size: 1.25cm;
+border-radius: 5px;
+margin-right: 10px;
+}
+.container .tab:nth-child(2) label h2{
+background: linear-gradient(135deg,#70f570,#49c628);
+}
+.container .tab:nth-child(6) label h2{
+background: linear-gradient(135deg,#3c8ce7,#00eaff);
+}
+.container .tab:nth-child(3) label h2{
+background: linear-gradient(135deg,#f570e1,#681a8c);
+}
+.container .tab:nth-child(4) label h2{
+background: linear-gradient(135deg,#dff570,#b3b351);
+}
+.container .tab:nth-child(5) label h2{
+background: linear-gradient(135deg,#f57070,#c64228);
+}
+.container .tab label h3{
+position: relative;
+font-weight: 500;
+color: #333;
+z-index: 10;
+}
+.container .tab .content{
+max-height: 0;
+transition: 1s;
+overflow: hidden;
+
+}
+.container .tab input:checked ~ .content{
+max-height: 100vh;
+}
+body {
+    font-family: Georgia, 'Times New Roman', Times, serif, sans-serif;
+    font-style: italic;
+    align-items: center;
+    min-height: 100vh;
+}
+.container .tab .content p{
+position: relative;
+padding: 10px 0;
+color:#333;
+}
+footer {
+    font-family: 'Times New Roman', Times, serif;
+    font-size: 18px;
+    justify-content: center;
+align-items: center;
+}
